@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:59:58 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/15 11:00:02 by mnogueir         ###   ########.fr       */
+/*   Created: 2025/10/09 19:06:42 by mnogueir          #+#    #+#             */
+/*   Updated: 2025/10/09 19:06:46 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	long	nbr;
+	size_t	i;
+	size_t	j;
 
-	nbr = (long)n;
-	if (nbr < 0)
+	i = 0;
+	j = ft_strlen(src);
+	if (size == 0)
+		return (j);
+	while (src[i] && (i < size - 1))
 	{
-		write (fd, "-", 1);
-		nbr = -nbr;
+		dst[i] = src[i];
+		i++;
 	}
-	if (nbr < 10)
-		write (fd, &"0123456789"[nbr], 1);
-	else
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		write (fd, &"0123456789"[nbr % 10], 1);
-	}
+	dst[i] = '\0';
+	return (j);
 }

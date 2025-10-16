@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/15 10:59:27 by mnogueir          #+#    #+#             */
+/*   Updated: 2025/10/15 11:05:42 by mnogueir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 
@@ -11,15 +23,14 @@ char	*ft_putnbr(int n, char *dest, int *i)
 	{
 		dest[*i] = '-';
 		nbr = -nbr;
-		i++;
+		(*i)++;
 	}
 	if (nbr < 10)
-		dest[*i] = (char)(nbr + '0');
+		dest[*i] = (nbr + '0');
 	else
 		ft_putnbr(nbr / 10, dest, i);
-	dest[*i] = (char)((nbr % 10) + '0');
+	dest[*i] = ((nbr % 10) + '0');
 	(*i)++;
-
 	return (dest);
 }
 
@@ -28,7 +39,7 @@ char	*ft_itoa(int n)
 	long	digits;
 	long	nbr;
 	char	*dest;
-	int	i;
+	int		i;
 
 	i = 0;
 	digits = 1;
@@ -47,11 +58,13 @@ char	*ft_itoa(int n)
 	if (!dest)
 		return (NULL);
 	dest = ft_putnbr(n, dest, &i);
-	return (dest);	
+	dest[i] = '\0';
+	return (dest);
 }
-
+/*
 int	main(void)
 {
-	printf("%s", ft_itoa(-1234));
-	return (0);
+	char *il = ft_itoa(2147483647);
+	printf("%s", il);
 }
+*/

@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:59:58 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/15 11:00:02 by mnogueir         ###   ########.fr       */
+/*   Created: 2025/10/15 11:00:21 by mnogueir          #+#    #+#             */
+/*   Updated: 2025/10/15 11:00:22 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	long	nbr;
+	unsigned int	i;
 
-	nbr = (long)n;
-	if (nbr < 0)
+	i = 0;
+	while (s[i])
 	{
-		write (fd, "-", 1);
-		nbr = -nbr;
-	}
-	if (nbr < 10)
-		write (fd, &"0123456789"[nbr], 1);
-	else
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		write (fd, &"0123456789"[nbr % 10], 1);
+		f(i, &s[i]);
+		i++;
 	}
 }
+
+/*
+void	ft_my_ft(unsigned int i, char *c)
+{
+	(void)i;
+	*c = '%';
+}
+
+#include <stdio.h>
+int	main(int argc, char **argv)
+{
+	(void)argc;
+	ft_striteri(argv[1], ft_my_ft);
+	printf("%s", argv[1]);
+	return (0);
+}*/

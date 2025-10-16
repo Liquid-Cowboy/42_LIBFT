@@ -6,7 +6,7 @@
 /*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 10:16:51 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/14 11:29:37 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/15 12:32:39 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	if (d > s)
 	{
-		i = n - 1;
-		while (i > 0)
-		{
-			d[i] = s[i];
-			i--;
-		}
-		d[i] = s[i];
+		while (n-- > 0)
+			d[n] = s[n];
 	}
 	return (dest);
 }
@@ -50,6 +45,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	char src[] = "Hello World";
-	printf("%s", (char *)ft_memmove((src + 1), (const char *)src, 12));
+	printf("%s\n", (char *)ft_memmove((src + 1), (const char *)src, 12));
 	return (0);
 }*/

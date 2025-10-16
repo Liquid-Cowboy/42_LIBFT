@@ -6,21 +6,22 @@
 /*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:46:08 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/13 14:49:30 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/15 11:25:03 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
 
-#include <fcntl.h>
+/*
 #include <stdio.h>
 
-/*
+
 int	main(void)
 {
 	write (1, "Teste stdout: ", 14);
