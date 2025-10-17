@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
+/*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 10:17:17 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/09 17:56:06 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:17:04 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

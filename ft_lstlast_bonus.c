@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
+/*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:51:44 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/17 15:51:45 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:17:44 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

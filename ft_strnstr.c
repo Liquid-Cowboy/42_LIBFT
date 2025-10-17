@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
+/*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 11:53:10 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/14 10:23:57 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:18:54 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

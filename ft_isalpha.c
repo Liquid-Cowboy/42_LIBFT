@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
+/*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 10:05:43 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/09 18:00:48 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:16:54 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
