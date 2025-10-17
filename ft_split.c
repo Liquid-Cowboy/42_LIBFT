@@ -6,7 +6,7 @@
 /*   By: mnogueir <mnogueir@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:58:53 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/15 19:48:36 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/17 15:48:20 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,34 +55,27 @@ char	*dup_and_alloc(char *str, char c)
 	return (str);
 }
 
-static void free_split(char **ar, int i)
+static void	free_split(char **ar, int i)
 {
 	while (i--)
 		free(ar[i]);
 	free(ar);
 }
 
-char	**ft_split(char const *s, char c)
+static
+char	**iterate_ar(size_t count, char const *s, char c, char **ar)
 {
-	char	**ar;
-	size_t	count;
 	size_t	i;
 	char	*str;
 
-	if (!s)
-		return (NULL);
-	count = count_words(s, c);
 	i = 0;
 	str = (char *)s;
-	ar = ft_calloc(sizeof(char *), (count + 1));
-	if (!ar)
-		return (NULL);
 	while (i < count)
 	{
 		while (*str == c)
 			str++;
 		ar[i] = dup_and_alloc(str, c);
-		if(!ar[i])
+		if (!ar[i])
 		{
 			free_split(ar, i);
 			return (NULL);
@@ -93,6 +86,21 @@ char	**ft_split(char const *s, char c)
 		str = ft_strchr((const char *)str, c);
 	}
 	ar[i] = NULL;
+	return (ar);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**ar;
+	size_t	count;
+
+	if (!s)
+		return (NULL);
+	count = count_words(s, c);
+	ar = ft_calloc(sizeof(char *), (count + 1));
+	if (!ar)
+		return (NULL);
+	ar = iterate_ar(count, s, c, ar);
 	return (ar);
 }
 
