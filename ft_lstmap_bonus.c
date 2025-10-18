@@ -6,7 +6,7 @@
 /*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:52:41 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/17 17:17:47 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/18 15:52:22 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 	void	*f_content;
 
-	if (!lst || !f || !del)
-		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{

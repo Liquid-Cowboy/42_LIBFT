@@ -6,7 +6,7 @@
 /*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:34:46 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/17 17:18:17 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/18 15:56:52 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	while (*s)
-	{
-		write (fd, s, 1);
-		s++;
-	}
+	write (fd, s, ft_strlen((const char *)s));
 	write (fd, "\n", 1);
 }

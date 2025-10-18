@@ -6,7 +6,7 @@
 /*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:27:33 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/17 17:17:37 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/18 15:54:03 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void	*))
 {
-	if (!lst || !del)
-		return ;
 	del(lst->content);
 	free(lst);
 }

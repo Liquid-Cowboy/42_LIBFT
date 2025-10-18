@@ -6,7 +6,7 @@
 /*   By: mnogueir <mnogueir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:51:44 by mnogueir          #+#    #+#             */
-/*   Updated: 2025/10/17 17:17:44 by mnogueir         ###   ########.fr       */
+/*   Updated: 2025/10/18 15:55:14 by mnogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (!lst)
-		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
